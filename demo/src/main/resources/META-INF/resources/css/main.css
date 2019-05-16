@@ -66,10 +66,12 @@
 
 .pencil-modal{
 	font-size: 1vw;
+	cursor: pointer;
 }
 
 .cancle-modal{
 	font-size: 1vw;
+	cursor: pointer;
 }
 
 .box-icons-modal{

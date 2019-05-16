@@ -22,7 +22,7 @@
 <body>
 	<div class="main-box display-flex">
 		<div class="box-options display-flex-column">
-			<span class="icon-add"  data-toggle="modal" data-target="#exampleModalCenter"></span>
+			<span class="icon-add"  data-toggle="modal" data-target="#modalCadastro"></span>
 			<p class="text-box">Cadastrar Cartório</p>
 		</div>
 <!-- 		<div class="box-options display-flex-column"> -->
@@ -43,9 +43,11 @@
 
 
 
+
+
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-hidden="true">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+    <div class="modal-content modal-large-box">
 
       <div class="modal-header">
         <h4 class="modal-title" id="myLargeModalLabel">Cartórios</h4>
@@ -63,7 +65,7 @@
 	      			<p><fmt:formatDate pattern="dd/MM/yyyy"  value="${cartorios.dataCriacao}"/></p>
 	    		</div>
 	    		<div class="col-sm box-icons-modal display-flex">
-	      			<span class="icon-pencil" data-toggle="tooltip" title="editar"></span>
+	      			<span class="icon-pencil" data-toggle="tooltip" title="editar" data-toggle="modal" data-target="#modalEdit"></span>
 	      			<span class="icon-cancel-circle" data-toggle="tooltip" title="excluir"></span>
 	      			<input type="hidden" class="ipt-id" value="${cartorios.id}"/>
 	      		</div>	
@@ -75,7 +77,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="modalCadastro" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -96,6 +98,28 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary saveCartorio">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEdit" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edição de Cartorio</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="input-group mb-3">			  	  
+		  	<input type="text" class="form-control nameCartorio" placeholder="Nome do Cartório" aria-label="" aria-describedby="basic-addon1" required>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary save-edit">Save changes</button>
       </div>
     </div>
   </div>
