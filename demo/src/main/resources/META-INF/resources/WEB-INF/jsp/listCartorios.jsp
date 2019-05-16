@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
+
   <div class="modal-dialog modal-lg">
     <div class="modal-content modal-large-box">
 
