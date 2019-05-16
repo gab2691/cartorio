@@ -15,7 +15,7 @@ public class Cartorio {
 	@GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	private Calendar dataCriacao;
+	private Date dataCriacao;
 	
 	
 	public Long getId() {
@@ -30,11 +30,11 @@ public class Cartorio {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Calendar getDataCriacao() {
+	public Date getDataCriacao() {
 		return dataCriacao;
 	}
-	public void setDataCriacao(Calendar calendar) {
-		this.dataCriacao = calendar;
+	public void setDataCriacao(Date date) {
+		this.dataCriacao = date;
 	}
 
 	

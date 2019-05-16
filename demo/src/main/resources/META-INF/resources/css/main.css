@@ -37,8 +37,9 @@
 
 .icon-pencil:before {
   content: "\e905";
-  font-size: 2.4vw;
+  font-size: 1.3vw;
   cursor: pointer;
+  
 }
 
 .icon-file-text2:before {
@@ -49,11 +50,28 @@
 
 .icon-cancel-circle:before {
   content: "\ea0d";
-  font-size: 2.4vw;
+  font-size: 1.3vw;
   cursor: pointer;
+  
 }
 
 .text-box{
 	font-family: 'Lato', sans-serif;
     font-size: 1.6vw;
+}
+
+.modal-body{
+	
+}
+
+.pencil-modal{
+	font-size: 1vw;
+}
+
+.cancle-modal{
+	font-size: 1vw;
+}
+
+.box-icons-modal{
+	justify-content: space-around;
 }
