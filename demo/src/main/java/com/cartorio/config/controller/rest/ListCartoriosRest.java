@@ -1,4 +1,4 @@
-package com.cartorio.config.controllers;
+package com.cartorio.config.controller.rest;
 
 import java.util.List;
 
