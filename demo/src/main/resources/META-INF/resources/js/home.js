@@ -24,7 +24,22 @@ $( document ).ready(function() {
 			}),
 			
 			success : function(data) {
-				console.log(data)
+				var dataCriacao = new Date(data.dataCriacao);
+				dataCriacao = (dataCriacao.getDate() + '/' + '0' +(dataCriacao.getMonth() + 1) + '/' +  dataCriacao.getFullYear());
+				$('.modal-content').append(
+						'<div class="modal-body display-flex modal-body-smal">'+
+							'<div class="col-sm">' +
+			      				'<p>'+ data.nome +'</p>' +
+		      				 '</div>'+      		
+				    		'<div class="col-sm">'+
+				      			'<p>'+ dataCriacao +'</p>'+
+				    		'</div>'+
+				    		'<div class="col-sm box-icons-modal display-flex">'+
+				      			'<span class="icon-pencil" data-toggle="tooltip" title="editar"></span>'+
+				      			'<span class="icon-cancel-circle" data-toggle="tooltip" title="excluir"></span>'+
+				      			'<input type="hidden" class="ipt-id" value="${cartorios.id}"/>'+
+				      		'</div>'+
+			      		'</div>')
 				$('#exampleModalCenter').modal('hide')
 			}
 	
@@ -33,13 +48,16 @@ $( document ).ready(function() {
 	
 	
 	$('.icon-cancel-circle').click(function(){
+		console.log('esta chegando aqui?');
 		var id = $('.ipt-id').val();
 		$.ajax({
 			
 			type: "POST",
 			url: "/deletCartorio",
-			
-			data: JSON.parse(id),
+			contentType : "application/x-www-form-urlencoded",
+			data: {
+				id: id
+			},		
 			
 			success : function(data) {
 				console.log(data)

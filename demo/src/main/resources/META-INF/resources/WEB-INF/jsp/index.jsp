@@ -55,7 +55,7 @@
       </div>
       
         <c:forEach var="cartorios" items="${cartorios}">
-      		<div class="modal-body display-flex">
+      		<div class="modal-body display-flex modal-body-smal">
 	      		<div class="col-sm">
 	      			<p>${cartorios.nome}</p>
 	    		</div>      		
